@@ -41,22 +41,22 @@ const create_item = () => {
   item.appendChild(input);
 
   let save_btn = document.createElement('button');
-  save_btn.innerHTML('Save');
+  save_btn.innerHTML = 'Save';
 
   save_btn.addEventListener('click', () =>{
 
-    save_btn.error('');
+    error.innerHTML = '';
 
-    if(input.value != ''){
+    if(input.value !== ''){
 
       order += 1;
 
-      item.value = input;
+      item.innerHTML = input.value;
 
       adding = false;
 
     } else {
-      save_btn.error(message);
+      error.innerHTML = message;
     }
 
     item.appendChild(save_btn);
