@@ -38,7 +38,7 @@ const create_item = () => {
 
 
   let input = document.createElement('input');
-  input.append(item);
+  item.appendChild(input);
 
   let save_btn = document.createElement('button');
   save_btn.innerHTML('Save');
@@ -59,7 +59,7 @@ const create_item = () => {
       save_btn.error(message);
     }
 
-    save_btn.append(item);
+    item.appendChild(save_btn);
 
     item.create_item();
 
@@ -77,7 +77,7 @@ document.querySelectorAll('.drop').forEach(element => {
     
     const id = event.dataTransfer.getData(); 
  
-  event.target.append(document.getElementById('id'));
+  event.target.appendChild(document.getElementById('id'));
      
   element.addEventListener('dragover',(event) => {
 
