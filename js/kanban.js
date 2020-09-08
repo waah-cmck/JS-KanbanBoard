@@ -26,7 +26,7 @@ const create_item = () => {
 
   item.addEventListener('dragstart', (event) => {
 
-    return event.dataTransfer.setData(event.target.id);
+    return event.dataTransfer.setData('text',event.target.id);
 
   });
 
