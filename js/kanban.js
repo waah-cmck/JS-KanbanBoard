@@ -59,13 +59,11 @@ const create_item = () => {
       error.innerHTML = message;
     }
 
-    item.appendChild(save_btn);
-
-    item.create_item();
-
-
-
   });
+
+  item.appendChild(save_btn);
+
+    return item;
 
 };
 
